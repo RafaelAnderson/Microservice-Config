@@ -17,19 +17,19 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: CLIENT-SERVICE
+        - id: client-service
           uri: lb://client-service
           predicates:
             - Path=/api/clients/**
         - id: bank-account-service
-          uri: lb://BANK-ACCOUNT-SERVICE
+          uri: lb://bank-account-service
           predicates:
             - Path=/api/accounts/**
         - id: transaction-service
-          uri: lb://BANK-ACCOUNT-SERVICE
+          uri: lb://bank-account-service
           predicates:
             - Path=/api/transactions/**
         - id: credits-service
-          uri: lb://BANK-ACCOUNT-SERVICE
+          uri: lb://bank-account-service
           predicates:
             - Path=/api/credits/**
