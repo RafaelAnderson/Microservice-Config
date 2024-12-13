@@ -18,18 +18,18 @@ spring:
           enabled: true
       routes:
         - id: client-service
-          uri: lb://client-service
+          uri: lb://CLIENT-SERVICE
           predicates:
             - Path=/api/clients/**
         - id: bank-account-service
-          uri: lb://bank-account-service
+          uri: lb://BANK-ACCOUNT-SERVICE
           predicates:
             - Path=/api/accounts/**
         - id: transaction-service
-          uri: lb://bank-account-service
+          uri: lb://BANK-ACCOUNT-SERVICE
           predicates:
             - Path=/api/transactions/**
         - id: credits-service
-          uri: lb://bank-account-service
+          uri: lb://BANK-ACCOUNT-SERVICE
           predicates:
             - Path=/api/credits/**
