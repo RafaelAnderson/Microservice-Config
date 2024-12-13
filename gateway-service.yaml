@@ -18,7 +18,7 @@ spring:
           enabled: true
       routes:
         - id: CLIENT-SERVICE
-          uri: lb://CLIENT-SERVICE
+          uri: lb://client-service
           predicates:
             - Path=/api/clients/**
         - id: bank-account-service
